@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.util.Scanner;
+
+class ProjectAlpha {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ProjectBeta beta = new ProjectBeta();
+        beta.Core(sc);
+    }
+}
+
+class ProjectBeta {
+    void Core(Scanner sc) {
+        System.out.println("Please type 2 numbers");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("Now - , + , * , /");
+        int c = sc.next().charAt(0);
+
+        if (c == '-') {
+            System.out.println(a - b);
+        }
+        else if (c == '+') {
+            System.out.println(a + b);
+        }
+        else if (c == '*') {
+            System.out.println(a * b);
+        }
+        else if (c == '/') {
+            System.out.println(a / b);
+        }
+    }
+}
